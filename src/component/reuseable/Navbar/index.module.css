@@ -1,0 +1,40 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: dodgerblue;
+}
+
+.innerMain{
+    display: flex;
+    gap: 20px;
+}
+
+.innerMain > p{
+    margin: 10px 0 0;
+}
+
+.logo1{
+    border: none;
+    background-color: blue;
+    color: black;
+    font-size: x-large;
+    border-radius: 10px;
+    margin: 0;
+    font-weight: bold;
+    font-family: "Arial Black", monospace;
+}
+
+.logo2{
+    background-color: white;
+    color: blue;
+    margin: 0;
+    font-weight: normal;
+    font-family: "Segoe UI Semibold", cursive;
+}
+
+.buttonDiv{
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}

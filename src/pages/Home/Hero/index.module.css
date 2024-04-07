@@ -1,0 +1,53 @@
+.logo{
+    border: none;
+    background-color: blue;
+    color: black;
+    font-size: xx-large;
+    border-radius: 10px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-family: "Arial Black", monospace;
+}
+
+
+.logo2{
+    background-color: white;
+    color: blue;
+    margin: 0;
+    font-weight: normal;
+    font-family: "Segoe UI Semibold", cursive;
+}
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.innerMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.innerMain2{
+    padding-left: 40px;
+}
+
+.text{
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    word-spacing: 10px;
+    font-weight: bolder;
+    width: 30%;
+}
+
+.text2{
+    margin: 0;
+    width: 30%;
+    font-weight: bold;
+    color: ghostwhite;
+}
