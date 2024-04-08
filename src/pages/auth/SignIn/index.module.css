@@ -1,13 +1,3 @@
-.circle {
-    display: flex;
-    width: 30%;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    border-radius: 50%;
-    background-color: red;
-}
-
 .main{
     border-radius: 20px;
     max-width: 400px;
@@ -21,3 +11,4 @@
     justify-content: center;
     align-content: center;
 }
+

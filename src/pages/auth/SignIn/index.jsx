@@ -1,17 +1,67 @@
 import style from "./index.module.css"
 import {Field, Form, Formik} from "formik";
-const SignIn = () => {
+import axios from "axios";
+import {Slide, toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
+import {useNavigate} from "react-router-dom";
+import Logo from "../../../component/reuseable/Logo";
 
-    const handleSubmit = (values) => {
-        console.log(values)
+
+
+const SignIn = () => {
+    const navigate = useNavigate()
+
+
+    const handleSubmit = async (values) => {
+
+       try {
+           console.log(values)
+           const response = await axios.post("http://localhost:9090/api/v1/quiz_app/user", values)
+           if(response.data.successful){
+               console.log(response.data.message.message)
+               toast.success(`${response.data.message.message}`, {
+                   position: "top-right",
+                   autoClose: 5000,
+                   hideProgressBar: false,
+                   closeOnClick: true,
+                   pauseOnHover: true,
+                   draggable: true,
+                   progress: undefined,
+                   theme: "dark",
+                   transition: Slide,
+               });
+               localStorage.setItem("user", values.email);
+               navigate("/login")
+           }else{
+               console.log(response)
+               toast.error(`Sign-up went wrong due to ${response.data.message}` , {
+                   position: "top-right",
+                   autoClose: 3000,
+                   hideProgressBar: false,
+                   closeOnClick: true,
+                   pauseOnHover: true,
+                   draggable: true,
+                   progress: undefined,
+               });
+           }
+       }catch (error){
+            console.log(error.response.data.message)
+           toast.error(`Sign-up went wrong due to` , {
+               position: "top-right",
+               autoClose: 3000,
+               hideProgressBar: false,
+               closeOnClick: true,
+               pauseOnHover: true,
+               draggable: true,
+               progress: undefined,
+           });
+       }
     }
 
     return(
         <div className={style.main}>
             <div className={style.innerMain}>
-                <div className={style.circle}>
-                    <p>Champ|quiz</p>
-                </div>
+                <Logo width={"30%"} height={"70px"}/>
             </div>
             <Formik initialValues={{
                 firstName: "",
@@ -145,6 +195,8 @@ const SignIn = () => {
                         </Form>
                 )}
             </Formik>
+            <ToastContainer />
+
         </div>
     )
 }
