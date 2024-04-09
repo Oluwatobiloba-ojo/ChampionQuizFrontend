@@ -4,6 +4,7 @@ import SignIn from "../pages/auth/SignIn";
 import Teacher from "../pages/Teacher";
 import Learner from "../pages/Learner";
 import Login from "../pages/auth/Login";
+import Quiz from "../pages/Quiz";
 
 export const Route = [
     {
@@ -29,6 +30,10 @@ export const Route = [
             {
               path: "/login",
               element: <Login/>
+            },
+            {
+                path: "/quiz",
+                element: <Quiz/>
             }
         ]
     }

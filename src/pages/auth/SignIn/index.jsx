@@ -12,7 +12,7 @@ const SignIn = () => {
     const navigate = useNavigate()
 
 
-    const handleSubmit = async (values) => {
+    const handleSubmit = async (values, {resetForm}) => {
 
        try {
            console.log(values)
@@ -31,6 +31,7 @@ const SignIn = () => {
                    transition: Slide,
                });
                localStorage.setItem("user", values.email);
+               resetForm()
                navigate("/login")
            }else{
                console.log(response)
