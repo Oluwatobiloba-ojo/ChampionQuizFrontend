@@ -32,7 +32,7 @@ export const Route = [
               element: <Login/>
             },
             {
-                path: "/quiz",
+                path: "/quiz/:quizTitle",
                 element: <Quiz/>
             }
         ]

@@ -43,9 +43,9 @@ const Learner = ()=>{
                                         <h2>{value.title}</h2>
                                     </div>
                                     <p>{value.description}</p>
-                                    <p>Data Created: {value.date[0]}/{value.date[1]}/{value.date[2]}</p>
+                                    <p>Data Created: {value.date}</p>
                                     <div className={style.button}>
-                                    <FilledButton text={"Start Quiz"} color={"blue"} textColor={"white"} navigate={"/quiz"}/>
+                                    <FilledButton text={"Start Quiz"} color={"blue"} textColor={"white"} navigate={"/quiz/"+value.title}/>
                                     </div>
                                 </div>
                             )
