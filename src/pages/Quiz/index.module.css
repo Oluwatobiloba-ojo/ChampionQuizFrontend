@@ -1,0 +1,15 @@
+.questions{
+    border: blue solid;
+    border-radius: 10px;
+    width: 100vh;
+    margin-left: 50vh;
+    padding-top: 20px;
+}
+
+.options{
+    /*width: 100vh;*/
+}
+
+.button:hover{
+    background-color: #61dafb;
+}
