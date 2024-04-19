@@ -5,6 +5,7 @@ import Teacher from "../pages/Teacher";
 import Learner from "../pages/Learner";
 import Login from "../pages/auth/Login";
 import Quiz from "../pages/Quiz";
+import ScoreBoard from "../pages/ScoreBoard";
 
 export const Route = [
     {
@@ -34,6 +35,10 @@ export const Route = [
             {
                 path: "/quiz/:quizTitle",
                 element: <Quiz/>
+            },
+            {
+                path: "/scoreBoard",
+                element: <ScoreBoard/>
             }
         ]
     }

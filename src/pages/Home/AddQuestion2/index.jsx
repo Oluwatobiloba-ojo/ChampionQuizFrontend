@@ -24,7 +24,7 @@ function AddQuestion2() {
                     onChange={(e) => handleInputChange(index, e.target.value)}
                 />
             ))}
-            <button onClick={addInput}>Add Input</button>
+            <button onChange={addInput}>Add Input</button>
         </div>
     );
 }

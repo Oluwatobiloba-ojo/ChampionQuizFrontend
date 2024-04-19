@@ -1,13 +1,8 @@
-.questions{
+.answerResponse{
     border: blue solid;
     border-radius: 10px;
     width: 100vh;
     margin-left: 50vh;
     padding-top: 20px;
+    
 }
-
-
-.options > input::after{
-    background-color: #61dafb;
-}
-
